@@ -6,7 +6,14 @@ public class BookSearchRequest {
     private String author;
     private String title;
     private List<String> genres;
+    private SummaryType type;
 
+    public SummaryType getType() {
+        return type;
+    }
+    public void setType(SummaryType type) {
+        this.type = type;
+    }
     public String getAuthor() { return author; }
     public void setAuthor(String author) { this.author = author; }
 

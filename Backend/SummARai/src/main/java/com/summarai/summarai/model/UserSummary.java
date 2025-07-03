@@ -12,7 +12,6 @@ import java.util.Set;
 public class UserSummary extends Summary {
     @Column
     private boolean is_public;
-
     @Column
     private  Date creation_time;
 

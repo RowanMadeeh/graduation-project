@@ -24,6 +24,6 @@ public interface BookSummaryService {
 
     public Page<BookSummaryDto> getBooksByTitle(String title, Pageable pageable);
 
-    public Page<BookSummaryDto> searchBooks(BookSearchRequest criteria, Pageable pageable);
+    public Page<?> searchBooks(BookSearchRequest criteria, Pageable pageable);
     public String getSummaryURL(Long id);
 }

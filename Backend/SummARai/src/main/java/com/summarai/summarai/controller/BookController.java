@@ -110,8 +110,8 @@ public class BookController {
     }
 
     @PostMapping("/search")
-    public ResponseEntity<Page<BookSummaryDto>> search(@RequestBody BookSearchRequest criteria, Pageable pageable) {
-        Page<BookSummaryDto> books = bookSummaryService.searchBooks(criteria, pageable);
+    public ResponseEntity<Page<?>> search(@RequestBody BookSearchRequest criteria, Pageable pageable) {
+        Page<?> books = bookSummaryService.searchBooks(criteria, pageable);
         if(books.hasContent())
             return ResponseEntity.status(HttpStatus.OK).body(books);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
