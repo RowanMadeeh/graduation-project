@@ -6,9 +6,8 @@ from fastapi import FastAPI, UploadFile, Request, File, Body
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import StreamingResponse
 
-from OCRService import OCRService
 from SummarizationPipeline import SummarizationService
-from Events import SSEEvent, EventModel
+from Events import SSEEvent
 import asyncio
 from sse_starlette import EventSourceResponse
 app = FastAPI()
@@ -62,6 +61,11 @@ app.add_middleware(
 #     return response
 
 
+
+"""
+    Endpoint to get Summary,
+    It takes a file as an input and returns array of bytes representing the summary pdf
+"""
 @app.post("/getSummary")
 async def getSummary(file: UploadFile = File(...)):
     summary = await summarizationService.run(file)
@@ -77,6 +81,10 @@ async def getSummary(file: UploadFile = File(...)):
     )
 
 
+
+"""
+    Endpoint used to keep the user updated with the current progress of the pipeline
+"""
 @app.get("/stream")
 async def stream_events(req: Request):
     async def stream_generator():
