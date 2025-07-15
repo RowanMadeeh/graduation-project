@@ -1,4 +1,3 @@
-# graduation-project
 # SummARai: Arabic Book Summarization Platform
 
 
