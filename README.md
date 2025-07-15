@@ -44,9 +44,11 @@ SummARai (Summarizing Arabic with AI) is an innovative web-based platform design
 
 Our hybrid approach outperforms traditional methods:
 
-| Metric          | Our Model | Baseline (mT5) |
-|-----------------|-----------|----------------|
-| BERTScore F1    | 71.73%    | 61.72%         |
+| Metric             | Our Model | Baseline (mT5) |
+|--------------------|-----------|----------------|
+| BERTScore Precision| 77.55%    | 70.76%         |
+| BERTScore Recall   | 66.54%    | 63.98%         |
+| BERTScore F1       | 71.73%    | 61.72%         |
 
 ## 🛠️ Installation & Setup
 
@@ -72,7 +74,7 @@ cd backend
 
 ### ML Service Setup
 ```bash
-cd ml-service
+cd Model/ModelPreprocessig
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
@@ -96,7 +98,7 @@ TA. Amany Hesham
 
 ## 🌐 Live Demo
 
-Explore SummARai: [Demo Link](https://shorturl.at/Ec0ds)
+Explore SummARai: [Demo Link](https://drive.google.com/file/d/1iP6-nMclOFVXo3q0pj08i1GcW9DUxBhr/view?usp=sharing)
 
 
 ---
