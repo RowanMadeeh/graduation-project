@@ -8,7 +8,7 @@ SummARai (Summarizing Arabic with AI) is an innovative web-based platform design
 
 ## 🚀 Key Features
 
-- **Hybrid Summarization Pipeline**: Combines extractive and abstractive techniques for optimal results
+- **Hybrid Summarization Pipeline**: Combines extractive(Graph-Based) and abstractive(AraT5) techniques for optimal results
 - **Arabic Language Specialization**: Specifically designed for Arabic's complex morphology and rich syntax
 - **User-Friendly Interface**: Intuitive web platform with Arabic UI
 - **Advanced AI Models**: Leverages AraT5 transformer and LLaMA 4 for superior summarization
